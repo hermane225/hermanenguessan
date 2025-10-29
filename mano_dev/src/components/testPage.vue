@@ -150,6 +150,16 @@
                 </p>
               </div>
             </div>
+         <!-- image de hermane  -->
+
+             <div class="w-full h-45 overflow-hidden">
+              <img
+                class="w-full h-auto object-cover"
+                src="/src/assets/ja.jpg"
+                alt="Description de l'image"
+              />
+            </div>
+
             <div class="space-y-6">
               <div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">En brief</h3>
@@ -202,6 +212,7 @@
             </div>
           </div>
         </div>
+
       </section>
 
       <!-- Experience Section -->
@@ -351,6 +362,60 @@
                 >
               </div>
             </div>
+
+
+
+   <section class="bg-white lg:grid lg:min-h-screen lg:place-content-center dark:bg-gray-900">
+  <div
+    class="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 md:grid md:grid-cols-2 md:items-center md:gap-4 lg:px-8 lg:py-32"
+  >
+    <div class="max-w-prose text-left">
+      <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl dark:text-white">
+        Je suis le prophète du web, parce que
+        <strong class="text-indigo-600"> je c<>de par  </strong>
+        revelation
+      </h1>
+
+      <p class="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed dark:text-gray-200">
+        « Chaque grande idée commence par une simple pensée. Le code, ce n’est pas seulement des lignes écrites sur un écran, c’est la traduction d’un rêve en réalité. Si tu peux l’imaginer, tu peux le coder. Et si tu peux le coder, tu peux changer le monde. »
+      </p>
+
+      <div class="mt-4 flex gap-4 sm:mt-6">
+        <!-- <a
+          class="inline-block rounded border border-indigo-600 bg-indigo-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700"
+          href="#"
+        >
+          Get Started
+        </a> -->
+
+        <!-- <a
+          class="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-white"
+          href="#"
+        >
+          Learn More
+        </a> -->
+      </div>
+    </div>
+
+   <!-- Responsive Image -->
+    <div class="mt-6 md:mt-0 sm:p-10">
+      <img
+        class="w-full h-auto max-w-full rounded-lg object-cover md:h-[400px] lg:h-[500px]"
+        src="/src/assets/we.jpg"
+        alt="Any Image Here"
+      />
+    </div>
+  </div>
+</section>
+
+            <!-- <div class="w-30 h-30 overflow-hidden">
+              <img
+                class="w-23 h-25 object-cover"
+                src="/src/assets/ja.jpg"
+                alt="Description de l'image"
+              />
+            </div> -->
+
 
             <!-- Job 3 -->
 
