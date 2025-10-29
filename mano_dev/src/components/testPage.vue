@@ -844,11 +844,11 @@
                   alt="Project"
                   class="w-full h-48 object-cover"
                 />
-                <div class="absolute top-4 right-4">
+                <!-- <div class="absolute top-4 right-4">
                   <span class="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-medium">
                     SGEC-YAKRO</span
                   >
-                </div>
+                </div> -->
               </div>
               <div class="p-6">
                 <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
@@ -1215,7 +1215,7 @@
       <!-- Footer -->
       <footer class="bg-gray-900 text-white py-8">
         <div class="max-w-6xl mx-auto px-4 text-center">
-          <p class="text-gray-400">© 2025 Hermane junior . Construit avec passion.</p>
+          <p class="text-gray-400">© 2025 Hermane junior . Construit ensemble avec passion.</p>
         </div>
       </footer>
     </body>
