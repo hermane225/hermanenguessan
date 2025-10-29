@@ -522,7 +522,7 @@
                 <p class="text-lg font-semibold text-gray-900 dark:text-white">
                   Université Virtuelle de cote d'ivoire -(UVCI)
                 </p>
-                <p class="text-gray-600 dark:text-gray-300">2022 - 2015 | Mention: très bien</p>
+                <p class="text-gray-600 dark:text-gray-300">2022 - 2025 | Mention: très bien</p>
               </div>
               <p class="text-gray-600 dark:text-gray-300">
                 Conception et architecture d’applications web performantes Développement
