@@ -46,24 +46,22 @@
               >
             </div>
             <div class="flex items-center space-x-4">
-              <button
+              <!-- <button
                 onclick="toggleDarkMode()"
                 class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
                 <span class="dark:hidden">🌙</span>
                 <span class="hidden dark:inline">☀️</span>
-              </button>
-              <button
-                onclick="window.print()"
-                class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                Técharger -PDF
+              </button> -->
+
+              <button >
+                <DownloadCV />
               </button>
             </div>
           </div>
         </div>
       </nav>
-
+ <br>
       <!-- Hero Section -->
       <section
         id="home"
@@ -72,23 +70,28 @@
         <div class="max-w-6xl mx-auto px-4">
           <div class="flex flex-col lg:flex-row items-center justify-between">
             <div class="lg:w-2/3 mb-8 lg:mb-0 animate-fade-in">
-              <h1 class="text-5xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h1 class="text-5xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 N'GUESSAN HERMANE JUNIOR
               </h1>
               <h2 class="text-2xl lg:text-3xl text-blue-600 dark:text-blue-400 font-semibold mb-6">
-                - Developpeur front-end et Mobile
+                - Developpeur full-stack et Mobile
               </h2>
-              <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl">
+
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+                 Je  transforme vos <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">idées</span> en une Application web et mobiles
+                </h1>
+                <br>
+              <!-- <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl">
                 Développeur Front-End Passionné Je transforme vos idées en applications web et
                 mobiles modernes, réactives et intuitives, offrant des expériences digitales fluides
                 et captivantes.
-              </p>
+              </p> -->
               <div class="flex flex-wrap gap-4">
                 <a
                   href="#contact"
-                  class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+                  class="bg-blue-600 hover:bg-blue-800 text-white px-8 py-3 rounded-lg font-medium transition-colors"
                 >
-                  Me Conctactez
+                  Commencer un projet
                 </a>
                 <a
                   href="#projects"
@@ -96,7 +99,12 @@
                 >
                   Voir mes Projets
                 </a>
-              </div>
+              </div> <br><br>
+              <!-- <p class="text-lg text-gray-600 dark:text-gray-500 mb-8 leading-relaxed max-w-2xl">
+                Développeur Front-End Passionné Je transforme vos idées en applications web et
+                mobiles modernes, réactives et intuitives, offrant des expériences digitales fluides
+                et captivantes.
+              </p> -->
             </div>
             <div class="lg:w-1/3 flex justify-center animate-slide-up">
               <div class="relative">
@@ -642,6 +650,7 @@
                   <div class="text-2xl mb-2">🖖</div>
                   <div class="font-medium text-gray-900 dark:text-white">Vue js</div>
                 </div>
+
                 <div
                   class="bg-white dark:bg-gray-800 rounded-lg p-4 text-center hover:shadow-md transition-shadow"
                 >
@@ -654,12 +663,29 @@
                   <div class="text-2xl mb-2">☁️</div>
                   <div class="font-medium text-gray-900 dark:text-white">AZURE</div>
                 </div>
-                <!-- <div
+
+
+             <div class="bg-white dark:bg-gray-800 rounded-lg p-4 text-center hover:shadow-md transition-shadow"
+                >
+                <div class="text-2xl mb-2">⚛️</div>
+                  <div class="font-medium text-gray-900 dark:text-white">Réact js </div>
+                </div>
+
+
+
+
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-4 text-center hover:shadow-md transition-shadow"
+                >
+                <div class="text-2xl mb-2">⚡️</div>
+                  <div class="font-medium text-gray-900 dark:text-white">Express js  </div>
+                </div>
+
+                <div
                   class="bg-white dark:bg-gray-800 rounded-lg p-4 text-center hover:shadow-md transition-shadow"
-                > -->
-                <!-- <div class="text-2xl mb-2">🐋</div>
+                >
+                <div class="text-2xl mb-2">🐋</div>
                   <div class="font-medium text-gray-900 dark:text-white">Docker</div>
-                </div> -->
+                </div>
                 <div
                   class="bg-white dark:bg-gray-800 rounded-lg p-4 text-center hover:shadow-md transition-shadow"
                 >
@@ -1225,6 +1251,7 @@
 <!-- Scripts -->
 <script setup>
 import { ref } from 'vue'
+import DownloadCV from './DownloadCV.vue'
 
 import emailjs from '@emailjs/browser'
 
@@ -1265,36 +1292,36 @@ const sendEmail = async () => {
   }
 }
 
-// Dark mode toggle
-function toggleDarkMode() {
-  document.documentElement.classList.toggle('dark')
-  localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'))
-}
+// // Dark mode toggle
+// function toggleDarkMode() {
+//   document.documentElement.classList.toggle('dark')
+//   localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'))
+// }
 
-// Initialize dark mode from localStorage
-document.addEventListener('DOMContentLoaded', function () {
-  if (localStorage.getItem('darkMode') === 'true') {
-    document.documentElement.classList.add('dark')
-  }
+// // Initialize dark mode from localStorage
+// document.addEventListener('DOMContentLoaded', function () {
+//   if (localStorage.getItem('darkMode') === 'true') {
+//     document.documentElement.classList.add('dark')
+//   }
 
   // Initialize skill bar animations
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        const skillBars = entry.target.querySelectorAll('.progress-bar')
-        skillBars.forEach(function (bar) {
-          bar.style.animation = 'progress 2s ease-in-out forwards'
-        })
-        observer.unobserve(entry.target)
-      }
-    })
-  })
+//   const observer = new IntersectionObserver(function (entries) {
+//     entries.forEach(function (entry) {
+//       if (entry.isIntersecting) {
+//         const skillBars = entry.target.querySelectorAll('.progress-bar')
+//         skillBars.forEach(function (bar) {
+//           bar.style.animation = 'progress 2s ease-in-out forwards'
+//         })
+//         observer.unobserve(entry.target)
+//       }
+//     })
+//   })
 
-  const skillsSection = document.querySelector('#skills')
-  if (skillsSection) {
-    observer.observe(skillsSection)
-  }
-})
+//   const skillsSection = document.querySelector('#skills')
+//   if (skillsSection) {
+//     observer.observe(skillsSection)
+//   }
+// })
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

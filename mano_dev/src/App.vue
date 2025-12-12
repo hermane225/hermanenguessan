@@ -1,4 +1,5 @@
 <script setup>
+
 // import footerPage from './components/footerPage.vue'
 </script>
 
