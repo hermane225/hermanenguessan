@@ -1283,7 +1283,7 @@ const sendEmail = async () => {
     console.log('✅ Email envoyé avec succès:', response)
 
     succesMessage.value = 'Merci ! Votre message a été envoyé avec succès.'
-    errorMessage.value = ' '
+
     form.value = { name: '', email: '', object: '', message: '' }
   } catch (error) {
     console.error('❌ Erreur:', error)
