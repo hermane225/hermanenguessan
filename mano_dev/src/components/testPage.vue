@@ -1241,7 +1241,7 @@
       <!-- Footer -->
       <footer class="bg-gray-900 text-white py-8">
         <div class="max-w-6xl mx-auto px-4 text-center">
-          <p class="text-gray-400">© 2025 Hermane junior . Construit ensemble avec passion.</p>
+          <p class="text-gray-400">© 2025- Hermane junior nguessan, le prophète du web!</p>
         </div>
       </footer>
     </body>
