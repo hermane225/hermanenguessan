@@ -1,3 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+
+  p {
+    @apply text-base sm:text-lg leading-relaxed tracking-wide;
+  }
+}
+
+@layer components {
+  .paragraph-main {
+    @apply text-lg sm:text-xl text-gray-700 dark:text-gray-200 leading-loose tracking-wide font-normal;
+  }
+
+  .paragraph-accent {
+    @apply text-xl sm:text-2xl text-gray-800 dark:text-gray-100 leading-relaxed font-medium;
+  }
+
+  .paragraph-small {
+    @apply text-base text-gray-600 dark:text-gray-300 leading-relaxed;
+  }
+}

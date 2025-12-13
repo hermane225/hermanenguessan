@@ -8,55 +8,112 @@
     <body class="bg-gray-50 dark:bg-gray-900 font-sans leading-relaxed">
       <!-- Navigation -->
       <nav
-        class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 shadow-sm no-print"
+        class="fixed top-0 w-full bg-gradient-to-r from-white/95 via-purple-50/95 to-indigo-50/95 dark:from-gray-900/95 dark:via-indigo-950/95 dark:to-purple-950/95 backdrop-blur-md z-50 shadow-lg border-b border-purple-100 dark:border-purple-900 no-print"
       >
         <div class="max-w-6xl mx-auto px-4 py-4">
           <div class="flex justify-between items-center">
-            <div class="text-xl font-bold text-gray-900 dark:text-white">Mano Dev</div>
+            <div class="text-xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Mano Dev</div>
+
+            <!-- Menu Desktop -->
             <div class="hidden md:flex space-x-8">
               <a
                 href="#home"
-                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >Accuiel</a
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium"
+                >Accueil</a
               >
               <a
                 href="#about"
-                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium"
                 >A propos</a
               >
               <a
                 href="#experience"
-                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium"
                 >Experience</a
               >
               <a
                 href="#skills"
-                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >Competances</a
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium"
+                >Competences</a
               >
               <a
                 href="#projects"
-                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >Projects</a
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium"
+                >Projets</a
               >
               <a
                 href="#contact"
-                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium"
                 >Contact</a
               >
             </div>
-            <div class="flex items-center space-x-4">
-              <!-- <button
-                onclick="toggleDarkMode()"
-                class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-              >
-                <span class="dark:hidden">🌙</span>
-                <span class="hidden dark:inline">☀️</span>
-              </button> -->
 
-              <button >
+            <div class="flex items-center space-x-4">
+              <!-- Bouton CV (caché sur mobile) -->
+              <div class="hidden sm:block">
                 <DownloadCV />
+              </div>
+
+              <!-- Bouton Menu Mobile -->
+              <button
+                @click="mobileMenuOpen = !mobileMenuOpen"
+                class="md:hidden p-2 rounded-lg bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 hover:bg-purple-200 dark:hover:bg-purple-800 transition-colors"
+              >
+                <svg v-if="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
               </button>
+            </div>
+          </div>
+
+          <!-- Menu Mobile -->
+          <div
+            v-show="mobileMenuOpen"
+            class="md:hidden mt-4 pb-4 border-t border-purple-200 dark:border-purple-800"
+          >
+            <div class="flex flex-col space-y-3 pt-4">
+              <a
+                href="#home"
+                @click="mobileMenuOpen = false"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/50"
+                >🏠 Accueil</a
+              >
+              <a
+                href="#about"
+                @click="mobileMenuOpen = false"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/50"
+                >👤 A propos</a
+              >
+              <a
+                href="#experience"
+                @click="mobileMenuOpen = false"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/50"
+                >💼 Experience</a
+              >
+              <a
+                href="#skills"
+                @click="mobileMenuOpen = false"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/50"
+                >🚀 Competences</a
+              >
+              <a
+                href="#projects"
+                @click="mobileMenuOpen = false"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/50"
+                >📂 Projets</a
+              >
+              <a
+                href="#contact"
+                @click="mobileMenuOpen = false"
+                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium py-2 px-4 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/50"
+                >📧 Contact</a
+              >
+              <div class="pt-2 px-4">
+                <DownloadCV />
+              </div>
             </div>
           </div>
         </div>
@@ -65,21 +122,21 @@
       <!-- Hero Section -->
       <section
         id="home"
-        class="pt-20 pb-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900"
+        class="pt-20 pb-16 bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 dark:from-gray-900 dark:via-indigo-950 dark:to-purple-950"
       >
         <div class="max-w-6xl mx-auto px-4">
           <div class="flex flex-col lg:flex-row items-center justify-between">
             <div class="lg:w-2/3 mb-8 lg:mb-0 animate-fade-in">
-              <h1 class="text-5xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              <h1 class="text-5xl lg:text-2xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 mb-4">
                 N'GUESSAN HERMANE JUNIOR
               </h1>
-              <h2 class="text-2xl lg:text-3xl text-blue-600 dark:text-blue-400 font-semibold mb-6">
+              <h2 class="text-2xl lg:text-3xl bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent font-semibold mb-6">
                 - Developpeur full-stack et Mobile
               </h2>
 
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                 Je  transforme vos <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">idées</span> en une Application web et mobiles
-                </h1>
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white leading-tight tracking-tight">
+                 Je transforme vos <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">idées</span> en Applications web et mobiles
+              </h1>
                 <br>
               <!-- <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl">
                 Développeur Front-End Passionné Je transforme vos idées en applications web et
@@ -89,13 +146,13 @@
               <div class="flex flex-wrap gap-4">
                 <a
                   href="#contact"
-                  class="bg-blue-600 hover:bg-blue-800 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+                  class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-purple-500/25 hover:scale-105"
                 >
                   Commencer un projet
                 </a>
                 <a
                   href="#projects"
-                  class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 px-8 py-3 rounded-lg font-medium transition-colors"
+                  class="border-2 border-purple-500 dark:border-purple-400 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/30 px-8 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105"
                 >
                   Voir mes Projets
                 </a>
@@ -109,7 +166,7 @@
             <div class="lg:w-1/3 flex justify-center animate-slide-up">
               <div class="relative">
                 <div
-                  class="w-64 h-64 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1"
+                  class="w-64 h-64 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-1 shadow-2xl shadow-purple-500/30 animate-pulse"
                 >
                   <img
                     src="/src/assets/opah.jpg"
@@ -138,19 +195,19 @@
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div class="lg:col-span-2">
               <div class="prose prose-lg dark:prose-invert max-w-none">
-                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-200 mb-6 leading-loose tracking-wide">
                   Je suis un développeur front-end passionné avec plus de 1 ans d’expérience dans la
                   création de solutions numériques qui font la différence. Mon parcours a commencé
                   par un diplôme en informatique et a évolué à travers divers rôles dans des
                   startups et des entreprises technologiques.
                 </p>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-200 mb-6 leading-loose tracking-wide">
                   Je me spécialise dans les frameworks JavaScript modernes, en particulier Vue.js ,
                   Nuxt js et Node.js, et j’ai une expérience des plateformes cloud comme Azure. Je
                   crois en l’écriture d’un code propre et maintenable et en le respect des
                   meilleures pratiques pour une architecture évolutive.
                 </p>
-                <p class="text-gray-600 dark:text-gray-300">
+                <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-200 leading-loose tracking-wide">
                   Lorsque je ne suis pas en train de coder, vous me trouverez en train de contribuer
                   à des projets open source, d’encadrer des appprenants développeurs ou d’explorer
                   les dernières tendances technologiques. Je suis toujours prêt à relever de
@@ -170,23 +227,23 @@
 
             <div class="space-y-6">
               <div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">En brief</h3>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">En bref</h3>
                 <div class="space-y-3">
                   <div class="flex justify-between">
-                    <span class="text-gray-600 dark:text-gray-300">Localisation</span>
-                    <span class="text-gray-900 dark:text-white">ABIDJAN , COTE D'IVOIRE</span>
+                    <span class="text-base text-gray-600 dark:text-gray-300 font-medium">Localisation</span>
+                    <span class="text-base text-gray-900 dark:text-white font-semibold">ABIDJAN, CÔTE D'IVOIRE</span>
                   </div>
                   <div class="flex justify-between">
-                    <span class="text-gray-600 dark:text-gray-300">Experience</span>
-                    <span class="text-gray-900 dark:text-white">1 ANS</span>
+                    <span class="text-base text-gray-600 dark:text-gray-300 font-medium">Expérience</span>
+                    <span class="text-base text-gray-900 dark:text-white font-semibold">1 AN</span>
                   </div>
                   <div class="flex justify-between">
-                    <span class="text-gray-600 dark:text-gray-300">Email</span>
-                    <span class="text-gray-900 dark:text-white">hermanenguessan525@gmail.com</span>
+                    <span class="text-base text-gray-600 dark:text-gray-300 font-medium">Email</span>
+                    <span class="text-base text-gray-900 dark:text-white font-semibold">hermanenguessan525@gmail.com</span>
                   </div>
                   <div class="flex justify-between">
-                    <span class="text-gray-600 dark:text-gray-300">Télephone</span>
-                    <span class="text-gray-900 dark:text-white">+225 0151600402</span>
+                    <span class="text-base text-gray-600 dark:text-gray-300 font-medium">Téléphone</span>
+                    <span class="text-base text-gray-900 dark:text-white font-semibold">+225 0151600402</span>
                   </div>
                 </div>
               </div>
@@ -530,9 +587,9 @@
                 <p class="text-lg font-semibold text-gray-900 dark:text-white">
                   Université Virtuelle de cote d'ivoire -(UVCI)
                 </p>
-                <p class="text-gray-600 dark:text-gray-300">2022 - 2025 | Mention: très bien</p>
+                <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-200 leading-loose tracking-wide">2022 - 2025 | Mention: très bien</p>
               </div>
-              <p class="text-gray-600 dark:text-gray-300">
+              <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-200 leading-loose tracking-wide">
                 Conception et architecture d’applications web performantes Développement
                 d’interfaces web et applications interactives Tests, débogage et optimisation du
                 code pour garantir la qualité et la stabilité
@@ -608,6 +665,32 @@
                     <div
                       class="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full progress-bar"
                       style="--progress-width: 82%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="flex justify-between mb-2">
+                    <span class="text-gray-700 dark:text-gray-300 font-medium">React.js</span>
+                    <span class="text-gray-600 dark:text-gray-400">85%</span>
+                  </div>
+                  <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                    <div
+                      class="bg-gradient-to-r from-blue-500 to-indigo-500 h-3 rounded-full progress-bar"
+                      style="--progress-width: 85%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="flex justify-between mb-2">
+                    <span class="text-gray-700 dark:text-gray-300 font-medium">Express.js</span>
+                    <span class="text-gray-600 dark:text-gray-400">70%</span>
+                  </div>
+                  <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                    <div
+                      class="bg-gradient-to-r from-green-500 to-emerald-500 h-3 rounded-full progress-bar"
+                      style="--progress-width: 70%"
                     ></div>
                   </div>
                 </div>
@@ -709,6 +792,12 @@
                 >
                   <div class="text-2xl mb-2">🎨</div>
                   <div class="font-medium text-gray-900 dark:text-white">Tailwind CSS</div>
+                </div>
+                <div
+                  class="bg-white dark:bg-gray-800 rounded-lg p-4 text-center hover:shadow-md transition-shadow"
+                >
+                  <div class="text-2xl mb-2">🐙</div>
+                  <div class="font-medium text-gray-900 dark:text-white">GitHub</div>
                 </div>
               </div>
 
@@ -1252,8 +1341,10 @@
 <script setup>
 import { ref } from 'vue'
 import DownloadCV from './DownloadCV.vue'
-
 import emailjs from '@emailjs/browser'
+
+// Menu mobile toggle
+const mobileMenuOpen = ref(false)
 
 const form = ref({
   name: '',
