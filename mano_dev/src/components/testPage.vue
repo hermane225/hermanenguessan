@@ -169,7 +169,7 @@
                   class="w-64 h-64 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-1 shadow-2xl shadow-purple-500/30 animate-pulse"
                 >
                   <img
-                    src="/src/assets/opah.jpg"
+                    src="/src/assets/lepropheteduweb.jpeg"
                     alt="Alex Johnson"
                     class="w-full h-full rounded-full object-cover"
                   />
