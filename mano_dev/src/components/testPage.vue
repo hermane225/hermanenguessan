@@ -196,13 +196,10 @@
             <div class="lg:col-span-2">
               <div class="prose prose-lg dark:prose-invert max-w-none">
                 <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-200 mb-6 leading-loose tracking-wide">
-                  Je suis un développeur front-end passionné avec plus de 1 ans d’expérience dans la
-                  création de solutions numériques qui font la différence. Mon parcours a commencé
-                  par un diplôme en informatique et a évolué à travers divers rôles dans des
-                  startups et des entreprises technologiques.
+                  Je suis développeur Full-Stack et Mobile, passionné par la création de solutions numériques à fort impact, avec plus de 2 ans d’expérience. Titulaire d’un diplôme en informatique, j’ai construit mon parcours à travers différents projets et missions au sein de startups et d’entreprises technologiques, où j’ai su transformer des idées en applications performantes et utiles.
                 </p>
                 <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-200 mb-6 leading-loose tracking-wide">
-                  Je me spécialise dans les frameworks JavaScript modernes, en particulier Vue.js ,
+                  Je me spécialise dans les frameworks JavaScript modernes, en particulier React js , express js , Vue.js ,
                   Nuxt js et Node.js, et j’ai une expérience des plateformes cloud comme Azure. Je
                   crois en l’écriture d’un code propre et maintenable et en le respect des
                   meilleures pratiques pour une architecture évolutive.
@@ -235,7 +232,7 @@
                   </div>
                   <div class="flex justify-between">
                     <span class="text-base text-gray-600 dark:text-gray-300 font-medium">Expérience</span>
-                    <span class="text-base text-gray-900 dark:text-white font-semibold">1 AN</span>
+                    <span class="text-base text-gray-900 dark:text-white font-semibold">2 AN</span>
                   </div>
                   <div class="flex justify-between">
                     <span class="text-base text-gray-600 dark:text-gray-300 font-medium">Email</span>
