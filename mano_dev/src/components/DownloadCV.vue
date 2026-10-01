@@ -1,32 +1,38 @@
 <template>
-  <div class="text-center">
+  <div>
     <button
+      type="button"
+      class="btn btn-ghost w-full"
+      :class="compact ? 'px-4 py-2 text-xs' : ''"
       @click="downloadCV"
-      class="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold hover:opacity-90 transition"
     >
-      Télécharger mon CV
+      <AppIcon name="download" class="h-4 w-4" :class="{ 'animate-bounce': isDownloading }" />
+      {{ compact ? 'Mon CV' : 'Télécharger mon CV' }}
     </button>
-    <!-- <p v-if="isDownloading" class="mt-2 text-sm text-gray-500">Téléchargement en cours...</p> -->
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import AppIcon from './AppIcon.vue'
+
+defineProps({
+  compact: { type: Boolean, default: false },
+})
 
 const isDownloading = ref(false)
 
 function downloadCV() {
   isDownloading.value = true
 
-  // Créaction d'un lien temporaire pour le téléchargement
+  // Création d'un lien temporaire pour le téléchargement
   const link = document.createElement('a')
   link.href = '/CV_Hermane_Nguessan.pdf' // chemin vers le CV dans /public/
-  link.download = '/CV_Hermane_Nguessan.pdf'
+  link.download = 'CV_Hermane_Nguessan.pdf'
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
 
-  // Optionnel : masquer le message après 2 secondes
   setTimeout(() => {
     isDownloading.value = false
   }, 2000)
